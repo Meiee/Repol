@@ -33,63 +33,65 @@ namespace ConsoleApp2
         //    Console.WriteLine($"строка = {txtOne} строка = {txtTwo}");
         //}
 
-        //public static void Main(string[] args)
-        //{
-        //    Console.WriteLine("Введите еще одну строку");
-        //    string txt_Two = Console.ReadLine();
-
-        //    Function(txt_Two, "122121");
-        //    Function(Console.ReadLine(), "122121");
+        public static void Main(string[] args)
+        {
+            IsLeapYear(1994);
 
 
-        //Console.WriteLine("Введите строку");
-        //string sent = "";
-        //for (; ; )
-        //{
 
-        //    Console.WriteLine("Bвeдитe строку");
-        //    string line = Console.ReadLine();
+            //Console.WriteLine("Введите строку");
+            //string sent = "";
+            //for (; ; )
+            //{
 
-        //    string[] terms = { "exit", "e" };
+            //    Console.WriteLine("Bвeдитe строку");
+            //    string line = Console.ReadLine();
 
-        //    bool quit = false;
-        //    foreach (string term in terms)
-        //    {
+            //    string[] terms = { "exit", "e" };
 
-        //        if (String.Compare(line, term) == 0)
-        //        {
-        //            quit = true;
-        //        }
-        //    }
-        //    if (quit == true)
-        //    {
-        //        break;
-        //    }
+            //    bool quit = false;
+            //    foreach (string term in terms)
+            //    {
 
-        //    sent = String.Concat(sent, line);
+            //        if (String.Compare(line, term) == 0)
+            //        {
+            //            quit = true;
+            //        }
+            //    }
+            //    if (quit == true)
+            //    {
+            //        break;
+            //    }
 
-        //    Console.WriteLine("\nBы ввели : " + sent);
-        //}
-        //Console.WriteLine(" \nПолучилось: \n" + sent);
+            //    sent = String.Concat(sent, line);
 
-        //IsLeapYear(12, 11, 14);
-        //Console.WriteLine("vvedite b");
-        //string txt = Console.ReadLine();
-        //double b = double.Parse(txt);
-        //IsLeapYear(11, b, 11);
+            //    Console.WriteLine("\nBы ввели : " + sent);
+            //}
+            //Console.WriteLine(" \nПолучилось: \n" + sent);
 
+            //IsLeapYear(12, 11, 14);
+            //Console.WriteLine("vvedite b");
+            //string txt = Console.ReadLine();
+            //double b = double.Parse(txt);
+            //IsLeapYear(11, b, 11);
+
+        }
         static void IsLeapYear(int x)
-        { 
-        Console.WriteLine("Введите год");
-            Console.ReadLine();
+        {
+            Console.WriteLine($"Введите год {x}");
             if (x % 4 == 0)
             {
-                Console.WriteLine("Год високосный");
-            } 
-            else 
-            {
+                if (x % 100 == 0)
+                {
+                    if (x % 400 != 0)
+                        Console.WriteLine("Год високосный");
+                }
                 Console.WriteLine("Год обычный");
-            };
+                Console.WriteLine("Год обычный");
+            }
+            else
+                Console.WriteLine("Год високосный");
+
 
         }
     }
