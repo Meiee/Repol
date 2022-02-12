@@ -78,7 +78,7 @@ namespace ConsoleApp2
         }
         static void IsLeapYear(int x)
         {
-            Console.WriteLine($"Введите год {x}");
+            Console.WriteLine($"Введите новый вводчимый год {x}");
             if (x % 4 == 0)
             {
                 if (x % 100 == 0)
